@@ -23,7 +23,9 @@ import flixel.util.FlxTimer;
 import io.newgrounds.NG;
 import lime.app.Application;
 import openfl.Assets;
+#if polymod
 import polymod.Polymod;
+#end
 
 using StringTools;
 
@@ -53,7 +55,7 @@ class TitleState extends MusicBeatState
 		FlxG.android.preventDefaultKeys = [BACK];
 		#end
 	  
-	  #if !mobile
+	        #if polymod
 		Polymod.init({modRoot: "mods", dirs: ['introMod']});
 		#end
 
